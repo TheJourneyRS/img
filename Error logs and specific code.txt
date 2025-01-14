@@ -1,0 +1,28 @@
+
+System.NullReferenceException: Object reference not set to an instance of an object
+  at MoreGraphs.Manufactured.HistoryAutoRecorderWorker_MoreGraphs_Manufactured_Drugs_Social.PullRecord () [0x00052] in <faa40ac7f51a4547a4a0bb97748908aa>:0 
+  at RimWorld.HistoryAutoRecorder.Tick () [0x00030] in <cd7169108ea74757aa50c5b33d275c15>:0 
+  at RimWorld.HistoryAutoRecorderGroup.Tick () [0x00010] in <cd7169108ea74757aa50c5b33d275c15>:0 
+  at RimWorld.History.HistoryTick () [0x00010] in <cd7169108ea74757aa50c5b33d275c15>:0 
+  at (wrapper dynamic-method) Verse.TickManager.Verse.TickManager.DoSingleTick_Patch5(Verse.TickManager)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+(wrapper dynamic-method) Verse.Log:Verse.Log.Error_Patch5 (string)
+(wrapper dynamic-method) Verse.TickManager:Verse.TickManager.DoSingleTick_Patch5 (Verse.TickManager)
+(wrapper dynamic-method) Verse.TickManager:Verse.TickManager.TickManagerUpdate_Patch0 (Verse.TickManager)
+(wrapper dynamic-method) Verse.Game:Verse.Game.UpdatePlay_Patch6 (Verse.Game)
+(wrapper dynamic-method) Verse.Root_Play:Verse.Root_Play.Update_Patch0 (Verse.Root_Play)
+
+<li Class="PatchOperationAdd">
+        <xpath>/Defs</xpath>
+        <value>
+          <HistoryAutoRecorderDef>
+            <defName>MoreGraphs_Manufactured_Drugs_Social</defName>
+            <label>Drugs (social)</label>
+            <graphColor>
+              <!--Teal -->(0.38, 0.95, 1, 1)</graphColor>
+            <recordTicksFrequency>6000</recordTicksFrequency>
+            <workerClass>MoreGraphs.Manufactured.HistoryAutoRecorderWorker_MoreGraphs_Manufactured_Drugs_Social</workerClass>
+            <graphLabelY>Drugs (social)</graphLabelY>
+          </HistoryAutoRecorderDef>
+        </value>
+      </li>
