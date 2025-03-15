@@ -1,0 +1,32 @@
+[VehicleFramework] Exception thrown while generating vehicle. Last Step: Beginning vehicle generation. Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: type
+  at System.Activator.CreateInstance (System.Type type, System.Boolean nonPublic) [0x00003] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Activator.CreateInstance (System.Type type) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at Verse.ThingMaker.MakeThing (Verse.ThingDef def, Verse.ThingDef stuff) [0x000a9] in <cd7169108ea74757aa50c5b33d275c15>:0 
+  at Vehicles.VehicleSpawner.GenerateVehicle (Vehicles.VehicleGenerationRequest request) [0x00011] in <9d4606d55c254526a3a3046aff6cab94>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+Verse.Log:Message (string)
+SmashTools.SmashLog:ErrorLabel (string,string,string)
+Vehicles.VehicleSpawner:GenerateVehicle (Vehicles.VehicleGenerationRequest)
+Vehicles.VehicleSpawner:GenerateVehicle (Vehicles.VehicleDef,RimWorld.Faction)
+Vehicles.Construction:RegisterThingSpawned (Verse.Thing,Verse.IntVec3&,Verse.Map,Verse.Rot4&,Verse.Thing&,Verse.WipeMode,bool)
+(wrapper dynamic-method) Verse.GenSpawn:Verse.GenSpawn.Spawn_Patch1 (Verse.Thing,Verse.IntVec3,Verse.Map,Verse.Rot4,Verse.WipeMode,bool)
+RimWorld.Designator_Build:DesignateSingleCell (Verse.IntVec3)
+Verse.DesignatorManager:ProcessInputEvents ()
+RimWorld.MapInterface:HandleMapClicks ()
+(wrapper dynamic-method) RimWorld.UIRoot_Play:RimWorld.UIRoot_Play.UIRootOnGUI_Patch1 (RimWorld.UIRoot_Play)
+Verse.Root:OnGUI ()
+
+Root level exception in OnGUI(): System.NullReferenceException: Object reference not set to an instance of an object
+  at Vehicles.Construction.RegisterThingSpawned (Verse.Thing newThing, Verse.IntVec3& loc, Verse.Map map, Verse.Rot4& rot, Verse.Thing& __result, Verse.WipeMode wipeMode, System.Boolean respawningAfterLoad) [0x0000e] in <9d4606d55c254526a3a3046aff6cab94>:0 
+  at (wrapper dynamic-method) Verse.GenSpawn.Verse.GenSpawn.Spawn_Patch1(Verse.Thing,Verse.IntVec3,Verse.Map,Verse.Rot4,Verse.WipeMode,bool)
+  at Vehicles.Construction.RegisterThingSpawned (Verse.Thing newThing, Verse.IntVec3& loc, Verse.Map map, Verse.Rot4& rot, Verse.Thing& __result, Verse.WipeMode wipeMode, System.Boolean respawningAfterLoad) [0x00097] in <9d4606d55c254526a3a3046aff6cab94>:0 
+  at (wrapper dynamic-method) Verse.GenSpawn.Verse.GenSpawn.Spawn_Patch1(Verse.Thing,Verse.IntVec3,Verse.Map,Verse.Rot4,Verse.WipeMode,bool)
+  at RimWorld.Designator_Build.DesignateSingleCell (Verse.IntVec3 c) [0x000ad] in <cd7169108ea74757aa50c5b33d275c15>:0 
+  at Verse.DesignatorManager.ProcessInputEvents () [0x00058] in <cd7169108ea74757aa50c5b33d275c15>:0 
+  at RimWorld.MapInterface.HandleMapClicks () [0x0000f] in <cd7169108ea74757aa50c5b33d275c15>:0 
+  at (wrapper dynamic-method) RimWorld.UIRoot_Play.RimWorld.UIRoot_Play.UIRootOnGUI_Patch1(RimWorld.UIRoot_Play)
+  at Verse.Root.OnGUI () [0x0003d] in <cd7169108ea74757aa50c5b33d275c15>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+(wrapper dynamic-method) Verse.Log:Verse.Log.Error_Patch1 (string)
+Verse.Root:OnGUI ()
